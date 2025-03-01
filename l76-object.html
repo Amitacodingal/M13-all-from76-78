@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Objects</title>
+</head>
+<body>
+<!-- activity 1 and 2 object creation and properties  -->
+<p id="demo"></p>
+
+<!-- activity 3 arguments object  -->
+<p id="args"></p>
+
+<!-- acp sum of all args  -->
+ <p id="demo1"></p>
+<script>
+
+// Create an object activity1 :
+var person = {
+firstName: "Ganesha",
+age: 11,
+};
+
+// Display some data from the object:
+document.getElementById("demo").innerHTML ="I am " + person.firstName  + person.age + " years old";
+
+//or
+//document.getElementById("demo").innerHTML = person["firstname"] + " am " + person["age"] + " years old.";
+
+//acitivity 2
+
+var value = Math.acos(-1);
+document.write("Demo1 Test Value : " + value + "<br>");
+
+var value = Math.asin(1);
+document.write("Demo2 Test Value : " + value + "<br>");
+
+var value = Math.atan(.5);
+document.write("Demo3 Test Value : " + value + "<br>");
+
+//activity3
+
+//The arguments object is a local variable available within all non - arrow functions.You can refer to a function's arguments inside that function by using its arguments object. It has entries for each argument the function was called with, with the first entry's index at 0
+
+
+function findMax() {
+
+var max = 0;
+for (i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+        max = arguments[i];
+    }
+}
+return max;
+}
+document.getElementById("args").innerHTML = findMax(18, 4, 25, 6, 12);
+
+//acp sum of all args 
+
+function sumAll() {
+
+    var sum = 0;
+    for (i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    return sum;
+}
+document.getElementById("demo1").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+var value = Math.sin(45);
+document.write("Sin 45 is  : " + value + "<br>");
+var value1 = Math.cos(45);
+document.write("Cos 45 is : " + value1 + "<br>");
+var value2 = Math.tan(45);
+document.write("Tan 45 is : " + value2 + "<br>");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- DOM  -->
+<h1 id="one">This is the already existing heading of the page</h1>
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus facere, architecto quibusdam soluta molestiae voluptatibus consequatur fugiat deleniti tenetur dignissimos.</p>
+
+<!-- activity2 dom structure  -->
+<div id="parent">
+    <div id="child1">one</div>
+    <div id="child2">two</div>
+    <div id="child3">three</div>
+</div>
+
+<div id="two"></div>
+
+<!-- acitvity 3 jS as external file-->
+
+
+<p>Adding JS as seperate file</p>
+<button type="button" onclick="myFunction()">Click Me!</button>
+<p id="demo"></p>
+
+    <script>
+        var text = document.getElementById("one").innerHTML;
+        alert("The first heading is " + text);
+
+       document.getElementById("child1").innerHTML = "fruits list"
+       //document.getElementById("parent").firstChild= "fruits list"
+
+      document.write("<br>")
+      document.getElementById("two").innerHTML = "firstele"
+
+      // create new ele
+      document.getElementById("parent").innerHTML = "<p> this is a dynamically added para</p>"
+    
+      //acitvity 3
+      //js as external file
+    </script>
+</body>
+</html>
